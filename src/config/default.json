@@ -1,0 +1,7 @@
+{
+   
+    "mongoURI": "mongodb+srv://ghorpadeprathamesh2411:ghorpadeprathamesh2411@cluster0.aq1rbx1.mongodb.net/?retryWrites=true&w=majority",
+    "mongoURI": "mongodb://0.0.0.0:27017/theCarRental",
+    "jwtSecret":"mysecretetoken"
+    
+}
