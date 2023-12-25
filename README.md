@@ -53,8 +53,6 @@ These fields define the structure of the User resource within the application. E
 
 - **Authentication Middleware**: Incorporates authentication middleware to secure sensitive operations (update and delete).
 
-- **Jest for Testing**: Uses Jest for writing unit tests covering critical components and integration tests for the REST API endpoints.
-
 # REST API Endpoints
 
 - `GET /users`: Returns a list of all users.
