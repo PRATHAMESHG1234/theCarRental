@@ -4,37 +4,37 @@ This repository contains a Node.js and Express.js backend application for perfor
 
 ## Project Structure
 
-│ app.js
-│ package-lock.json
-│ package.json
-│
-└───src
-├───config
-│ Constants.js
-│ Database.js
-│ default.json
-│
-├───helpers
-│ Auth.helpers.js
-│
-├───middleware
-│ Auth.middleware.js
-│ LoggerMiddleware.js
-│ Validation.middleware.js
-│
-└───v1
-├───controllers
-│ User.controller.js
-│
-├───models
-│ User.model.js
-│
-├───routes
-│ Common.routes.js
-│ User.routes.js
-│
-└───services
-User.services.js
+|-- app.js
+|-- package-lock.json
+|-- package.json
+|
+|-- src
+| |-- config
+| | |-- Constants.js
+| | |-- Database.js
+| | |-- default.json
+| |
+| |-- helpers
+| | |-- Auth.helpers.js
+| |
+| |-- middleware
+| | |-- Auth.middleware.js
+| | |-- LoggerMiddleware.js
+| | |-- Validation.middleware.js
+| |
+| └── v1
+| |-- controllers
+| | |-- User.controller.js
+| |
+| |-- models
+| | |-- User.model.js
+| |
+| |-- routes
+| | |-- Common.routes.js
+| | |-- User.routes.js
+| |
+| └── services
+| |-- User.services.js
 
 # User Resource Fields
 
