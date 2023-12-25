@@ -2,7 +2,7 @@ const { User } = require("../models/User.model");
 
 const getAllUsers = async () => {
   try {
-    const users = await User.find();
+    const users = await User.find().select("-password");
 
     return users;
   } catch (err) {
@@ -13,7 +13,7 @@ const getAllUsers = async () => {
 
 const getUserByID = async (userId) => {
   try {
-    const user = await User.findById(userId);
+    const user = await User.findById(userId).select("-password");
 
     return user;
   } catch (err) {
@@ -57,7 +57,7 @@ const updateUser = async (userId, { name, email, phone, password, role }) => {
         role: role || undefined,
       },
       { new: true }
-    );
+    ).select("-password");
 
     return updatedUser;
   } catch (err) {
