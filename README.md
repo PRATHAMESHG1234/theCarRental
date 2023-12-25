@@ -81,4 +81,4 @@ These fields define the structure of the User resource within the application. E
 
 # Access the API:
 
-The API will be available at http://localhost:3000/v1/users.
+The API will be available at http://localhost:3000/api/users.
