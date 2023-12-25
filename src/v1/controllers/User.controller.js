@@ -8,7 +8,17 @@ const {
 } = require("../../config/Constants");
 const AuthHelper = require("../../helpers/Auth.helpers");
 const userService = require("../services/User.services");
-
+/**
+ * Retrieve all users and send a JSON response.
+ *
+ * @function
+ * @async
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @returns {JSON} - contains all user data
+ * @throws {Object} - An error object if an error occurs during the operation.
+ * @since 25-12-23 - Created on 25-12-23 by Prathamesh Ghorpade.
+ */
 const getAllUsers = async (req, res) => {
   try {
     const users = await userService.getAllUsers();
@@ -20,6 +30,18 @@ const getAllUsers = async (req, res) => {
       .json({ error: "Internal Server Error" });
   }
 };
+
+/**
+ * Retrieve a user by ID and send a JSON response.
+ *
+ * @function
+ * @async
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @throws {Object} - An error object if an error occurs during the operation.
+ * @returns {Object|JSON} - JSON response containing user data or error details.
+ * @since 25-12-23 - Created on 25-12-23 by Prathamesh Ghorpade.
+ */
 const getUserByID = async (req, res) => {
   try {
     const errors = validationResult(req);
@@ -52,6 +74,19 @@ const getUserByID = async (req, res) => {
   }
 };
 
+/**
+ * Create a new user, hash the password, and send a JSON response with a JWT token.
+ *
+ * @function
+ * @async
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @throws {Object} - An error object if an error occurs during the operation.
+ * @returns {Object} - JSON response containing user creation success message and token.
+ * @property {string} message - A success message indicating that the user was created successfully.
+ * @property {string} token - JWT token generated for the new user.
+ * @since 25-12-23 - Created on 25-12-23 by Prathamesh Ghorpade.
+ */
 const createUser = async (req, res) => {
   try {
     const errors = validationResult(req);
@@ -95,6 +130,17 @@ const createUser = async (req, res) => {
   }
 };
 
+/**
+ * Update a user's information and send a JSON response with the updated user data.
+ *
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @returns {void} - No explicit return value.
+ * @throws {Object} - An error object if an error occurs during the operation.
+ * @returns {Object} - JSON response containing the updated user data.
+ * @since 25-12-23 - Created on 25-12-23 by Prathamesh Ghorpade.
+ */
 const updateUser = (req, res) => {
   try {
     const errors = validationResult(req);
@@ -134,7 +180,16 @@ const updateUser = (req, res) => {
       .json({ error: "Internal Server Error" });
   }
 };
-
+/**
+ * delete a user's information.
+ *
+ * @function
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @returns {void} - No explicit return value.
+ * @throws {Object} - An error object if an error occurs during the operation.
+ * @since 25-12-23 - Created on 25-12-23 by Prathamesh Ghorpade.
+ */
 const deleteUser = (req, res) => {
   try {
     const errors = validationResult(req);
